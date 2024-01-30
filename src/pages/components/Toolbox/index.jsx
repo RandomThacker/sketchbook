@@ -1,14 +1,25 @@
 import { COLORS, MENU_ITEMS } from "@/constants";
 import styles from "./index.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { changeColor, changeBrushSize } from "@/slice/toolboxSlice";
 
 const Toolbox = () => {
-  const updateBrushSize = () => {};
+  const dispatch = useDispatch();
+
   const activeMenuItem = useSelector((state) => state.menu.activeMenuItem);
   const showStroke = activeMenuItem === MENU_ITEMS.PENCIL;
   const showBrush =
     activeMenuItem === MENU_ITEMS.PENCIL ||
     activeMenuItem === MENU_ITEMS.ERASER;
+
+    const updateBrushSize = (e) => {
+      dispatch(changeBrushSize({item: activeMenuItem, size: e.target.value}))
+    };
+
+    const updateColor = (newColor) => {
+      dispatch(changeColor({item: activeMenuItem, color: newColor}))
+    };
+
 
   return (
     <div className={styles.toolboxContainer}>
@@ -19,26 +30,36 @@ const Toolbox = () => {
             <div
               className={styles.colorBox}
               style={{ backgroundColor: COLORS.BLACK }}
+              onClick={()=>updateColor(COLORS.BLACK)}
             />
             <div
               className={styles.colorBox}
               style={{ backgroundColor: COLORS.RED }}
+              onClick={()=>updateColor(COLORS.RED)}
+
             />
             <div
               className={styles.colorBox}
               style={{ backgroundColor: COLORS.GREEN }}
+              onClick={()=>updateColor(COLORS.GREEN)}
             />
             <div
               className={styles.colorBox}
               style={{ backgroundColor: COLORS.BLUE }}
+              onClick={()=>updateColor(COLORS.BLUE)}
+
             />
             <div
               className={styles.colorBox}
               style={{ backgroundColor: COLORS.ORANGE }}
+              onClick={()=>updateColor(COLORS.ORANGE)}
+
             />
             <div
               className={styles.colorBox}
               style={{ backgroundColor: COLORS.YELLOW }}
+              onClick={()=>updateColor(COLORS.YELLOW)}
+
             />
           </div>
         </div>
