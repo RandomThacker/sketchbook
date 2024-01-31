@@ -23,9 +23,8 @@ const Board = () => {
             anchor.download = 'sketch.jpg'
             anchor.click()
       }
-      dispatch(actionItemClick(null))
       console.log(actionMenuItems);
-    }, [actionMenuItems, dispatch]);
+    }, [actionMenuItems]);
   
     console.log(color, size);
   
