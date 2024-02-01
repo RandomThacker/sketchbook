@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { MENU_ITEMS } from "@/constants";
-import { menuItemClick, actionItemClick } from "@/slice/menuSlice";
+import { actionItemClick } from "@/slice/menuSlice";
 import { socket } from "@/socket";
 
 const Board = () => {
@@ -39,23 +39,31 @@ const Board = () => {
       context.putImageData(imageData, 0, 0);
     }
     dispatch(actionItemClick(null));
-
-    console.log(actionMenuItem);
   }, [actionMenuItem, dispatch]);
-
-  console.log(color, size);
 
   useEffect(() => {
     if (!canvasRef.current) return;
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
-    const changeConfig = () => {
+    const changeConfig = (color, size) => {
       context.strokeStyle = color;
       context.lineWidth = size;
     };
 
-    changeConfig();
+    const handleChangeConfig = (config)=>{
+        console.log(config);
+        changeConfig(config.color, config.size)
+    }
+
+    changeConfig(color, size);
+    socket.on('changeConfig', handleChangeConfig)
+
+    return()=>{
+        socket.off('changeConfig', handleChangeConfig)
+
+    }
+
   }, [color, size]);
 
   useLayoutEffect(() => {
