@@ -1,10 +1,11 @@
+import React from "react";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
 import { MENU_ITEMS } from "@/constants";
 import { actionItemClick } from "@/slice/menuSlice";
-
 import { socket } from "@/socket";
+import styles from './index.module.css'
+
 
 const Board = () => {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ const Board = () => {
       )
         historyPointer.current += 1;
       else return;
-      
+
       const imageData = drawHistory.current[historyPointer.current];
       context.putImageData(imageData, 0, 0);
     }
@@ -67,7 +68,7 @@ const Board = () => {
     };
   }, [color, size]);
 
-  // before browser pain
+  // before browser paint
   useLayoutEffect(() => {
     if (!canvasRef.current) return;
     const canvas = canvasRef.current;
@@ -150,7 +151,15 @@ const Board = () => {
   }, []);
 
   return (
-    <canvas ref={canvasRef} style={{ backgroundColor: "#202124" }}></canvas>
+    <div>
+      <img
+        src="https://i.ibb.co/7Yp4H6P/Group-12.png"
+        alt=""
+        style={{ position: "absolute", top: 0, left: 0, scale:"0.6" }}
+        className={styles.logo}
+      />
+      <canvas ref={canvasRef} style={{ backgroundColor: "#202124" }}></canvas>
+    </div>
   );
 };
 
