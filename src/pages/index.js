@@ -4,10 +4,10 @@ import Toolbox from "./components/Toolbox";
 
 export default function Home() {
   return (
-    <>
-    <Menu/>
-    <Board/>
-    <Toolbox/>
-    </>
+    <div className="overflow-hidden h-screen w-full">
+      <Menu />
+      <Board />
+      <Toolbox />
+    </div>
   );
 }

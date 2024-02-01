@@ -1,11 +1,11 @@
 export const COLORS = {
-    BLACK: 'black',
-    RED: 'red',
-    GREEN: 'green',
-    BLUE: 'blue',
+    BLACK: 'white',
+    RED: '#FC359C',
+    GREEN: '#B98FDD',
+    BLUE: '#8CFF32',
     ORANGE: 'orange',
-    YELLOW: 'yellow',
-    WHITE: 'white'
+    YELLOW: '#7675FF',
+    WHITE: '#202124'
 }
 
 export const MENU_ITEMS = {
