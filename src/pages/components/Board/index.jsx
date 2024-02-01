@@ -81,7 +81,7 @@ const Board = () => {
 
     function setCanvasSize() {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
     setCanvasSize()
   

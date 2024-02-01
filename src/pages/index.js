@@ -4,7 +4,7 @@ import Toolbox from "./components/Toolbox";
 
 export default function Home() {
   return (
-    <div className="overflow-y-hidden h-screen w-full bg-[#202124] sm:overflow-y-hidden">
+    <div className="bg-[#202124]">
       <Menu />
       <Board />
       <Toolbox />
