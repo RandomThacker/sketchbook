@@ -79,8 +79,15 @@ const Board = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    function setCanvasSize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerWidth;
+    }
+    setCanvasSize()
+  
+    window.addEventListener("resize", setCanvasSize);
+
+
 
     const beginPath = (x, y) => {
       context.beginPath();
