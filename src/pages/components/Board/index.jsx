@@ -163,7 +163,7 @@ const Board = () => {
         style={{ position: "absolute", top: 0, left: 0, scale: "0.6" }}
         className={styles.logo}
       />
-      <canvas ref={canvasRef} style={{ backgroundColor: "#202124" }}></canvas>
+      <canvas ref={canvasRef} ></canvas>
     </div>
   );
 };
