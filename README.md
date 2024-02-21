@@ -1,6 +1,6 @@
-## Random Meet
+## Sketchbook
 
-Random Meet is a Google Meet clone that has been built using webRTC and the topology used is Mesh topology.
+Sketchbook – a dynamic sketchbook with live collaboration features, drawing inspiration from the beloved Excali Draw.
 
 ![image](https://github.com/RandomThacker/sketchbook/assets/141705990/9c1dbd89-4b0e-41f0-b3e9-901e832d4db9)
 
@@ -11,16 +11,14 @@ Random Meet is a Google Meet clone that has been built using webRTC and the topo
 
 
 ## 📓Features 
--Real-time Video Calling: Enjoy seamless video calls with peers in real-time, akin to Google Meet, powered by WebRTC technology.
-
--Efficient State Management: Redux Toolkit ensures smooth data flow and easy debugging, enhancing the user experience.
-
--WebSocket & Signaling: Real-time collaboration is facilitated through WebSocket communication and signaling via Socket.IO, enabling instant data exchange between clients.
-
--Stream Handling: Smooth transmission and reception of audio and video streams ensure a seamless communication experience during video calls.
+🖌️ Draw lines, write text, doodle, and erase mistakes.
+↩️ Enjoy Undo and Redo support to correct or revert changes effortlessly.
+🎨 Export your creations in multiple formats like PNG, JPEG, and more.
+💡 Collaborate with friends and family by creating or joining rooms for real-time drawing fun.
+📱 Responsive design ensures compatibility with all screen sizes.
 
 ## 💻 Tech-Stack 
--Frontend: Next.js + Redux Toolkit + WebRTC + PeerJs
+-Frontend: Next.js + Redux Toolkit + Canvas
 
 -Real-time Collaboration: WebSocket & Signaling via Socket.IO
 
