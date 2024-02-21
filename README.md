@@ -11,7 +11,7 @@ Sketchbook – a dynamic sketchbook with live collaboration features, drawing in
 
 
 ## 📓Features 
-🖌️ Draw lines, write text, doodle, and erase mistakes.
+🖌️ Draw lines, make doodles, and erase mistakes.
 
 ↩️ Enjoy Undo and Redo support to correct or revert changes effortlessly.
 
