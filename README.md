@@ -1,40 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Random Meet
 
-## Getting Started
+Random Meet is a Google Meet clone that has been built using webRTC and the topology used is Mesh topology.
 
-First, run the development server:
+![image](https://github.com/RandomThacker/random-meet/assets/141705990/27df8665-362e-4837-bf4c-56f03a192c49)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Live link
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**[https://randommeet.vercel.app/](https://randommeet.vercel.app/)**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 📓Features 
+-Real-time Video Calling: Enjoy seamless video calls with peers in real-time, akin to Google Meet, powered by WebRTC technology.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-Efficient State Management: Redux Toolkit ensures smooth data flow and easy debugging, enhancing the user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+-WebSocket & Signaling: Real-time collaboration is facilitated through WebSocket communication and signaling via Socket.IO, enabling instant data exchange between clients.
 
-## Learn More
+-Stream Handling: Smooth transmission and reception of audio and video streams ensure a seamless communication experience during video calls.
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Tech-Stack 
+-Frontend: Next.js + Redux Toolkit + WebRTC + PeerJs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-Real-time Collaboration: WebSocket & Signaling via Socket.IO
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-Server: NodeJs + ExpressJs
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚙️Installation 
+To set up the Food Ordering App project locally, follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository:
+    ```bash
+    https://github.com/RandomThacker/random-meet.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd random-meet
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the application:
+    ```bash
+    npm run dev
+    ```
